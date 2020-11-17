@@ -13,7 +13,7 @@ export class RomeNumberConverter {
    * @param value Rome number string
    * @returns Latin number
    */
-  convert2(value: string): number {
+  convert(value: string): number {
     // check is user string is currect
     let word = this.checkIsRomeNumber(value);
     // check add or remove state
@@ -41,7 +41,6 @@ export class RomeNumberConverter {
         sum += isAdd * (currentValue + subSum);
         subSum = 0;
       }
-
       // current value save for next time
       currentValue = nextValue;
     }
@@ -88,6 +87,6 @@ export class RomeNumberConverter {
   }
 }
 
-const word = "MLXVI  ";
+const word = "XII  ";
 const converter = new RomeNumberConverter();
-console.log(word, " = ", converter.convert2(word));
+console.log(word, " = ", converter.convert(word));
