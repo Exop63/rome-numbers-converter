@@ -1,4 +1,4 @@
-var word = "CCVI";
+var word = "CCVI5";
 var data = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 function convert(value) {
     // check is user string is currect
@@ -33,19 +33,16 @@ function checkIsAdd(first, secont) {
     var diffLetter = first < secont;
     return diffLetter ? -1 : 1;
 }
+// check value is currect rome number
 function checkIsRomeNumber(value) {
     var word = value.toUpperCase().trim();
-    console.log("word lengt: ", word.length);
-    var _loop_1 = function (i) {
-        var currentLetter = word[i];
-        4;
-        var isRomeLetter = Object.keys(data).some(function (el) { return el === currentLetter; });
-        if (!isRomeLetter) {
-            throw new Error(currentLetter + " is not a rome letter.");
-        }
-    };
     for (var i = 0; i < word.length; i++) {
-        _loop_1(i);
+        var currentLetter = word[i];
+        // let isRomeLetter = Object.keys(data).some((el) => el === currentLetter);
+        var isRomeLetter = data[currentLetter];
+        if (!isRomeLetter) {
+            throw new Error(currentLetter + " is not a rome letter. letter index:" + i);
+        }
     }
     return word;
 }

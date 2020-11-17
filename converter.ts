@@ -38,15 +38,18 @@ function checkIsAdd(first: number, secont: number): number {
   return diffLetter ? -1 : 1;
 }
 
+// check value is currect rome number
 function checkIsRomeNumber(value: string) {
   let word: string = value.toUpperCase().trim();
-  console.log("word lengt: ", word.length);
   for (let i: number = 0; i < word.length; i++) {
-    let currentLetter: string = word[i];4
-    let isRomeLetter = Object.keys(data).some((el) => el === currentLetter);
+    let currentLetter: string = word[i];
+    // let isRomeLetter = Object.keys(data).some((el) => el === currentLetter);
+    let isRomeLetter = data[currentLetter];
 
     if (!isRomeLetter) {
-      throw new Error(currentLetter + " is not a rome letter.");
+      throw new Error(
+        currentLetter + " is not a rome letter. letter index:" + i
+      );
     }
   }
   return word;
