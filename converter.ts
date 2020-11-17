@@ -87,6 +87,3 @@ export class RomeNumberConverter {
   }
 }
 
-const word = "XII  ";
-const converter = new RomeNumberConverter();
-console.log(word, " = ", converter.convert(word));
