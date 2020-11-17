@@ -1,0 +1,23 @@
+{
+  "name": "rome-numbers-converter",
+  "version": "1.0.0",
+  "description": "Rome number converter for Typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc converter.ts && node converter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exop63/rome-numbers-converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exop63/rome-numbers-converter/issues"
+  },
+  "homepage": "https://github.com/Exop63/rome-numbers-converter#readme",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}
