@@ -1,4 +1,4 @@
-const word: string = "CCVI 6 ";
+const word: string = "CCVI";
 
 const data: any = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 function convert(value: string): number {
@@ -42,7 +42,7 @@ function checkIsRomeNumber(value: string) {
   let word: string = value.toUpperCase().trim();
   console.log("word lengt: ", word.length);
   for (let i: number = 0; i < word.length; i++) {
-    let currentLetter: string = word[i];
+    let currentLetter: string = word[i];4
     let isRomeLetter = Object.keys(data).some((el) => el === currentLetter);
 
     if (!isRomeLetter) {

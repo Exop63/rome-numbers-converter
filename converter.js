@@ -1,4 +1,4 @@
-var word = "CCVI 6 ";
+var word = "CCVI";
 var data = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 function convert(value) {
     // check is user string is currect
@@ -38,6 +38,7 @@ function checkIsRomeNumber(value) {
     console.log("word lengt: ", word.length);
     var _loop_1 = function (i) {
         var currentLetter = word[i];
+        4;
         var isRomeLetter = Object.keys(data).some(function (el) { return el === currentLetter; });
         if (!isRomeLetter) {
             throw new Error(currentLetter + " is not a rome letter.");
